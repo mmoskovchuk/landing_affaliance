@@ -6,20 +6,6 @@ $(function() {
 });
 
 
-/*$( document ).ready(function() {
-
-    $('.terms button').on('click', function(){
-        $('.terms button').toggleClass('btnUp')
-        /!*if($('.terms').hasClass('showTerms')){
-            $('.terms button').text('Hide Terms & Conditions');
-        }else{
-            $('.terms button').text('Terms & Conditions');
-        }*!/
-    })
-
-});*/
-
-
 var swiper = new Swiper('.swiper-container', {
     direction: 'vertical',
     slidesPerView: 2,
@@ -102,21 +88,24 @@ var swiper = new Swiper('.swiper-container', {
 });
 
 $( document ).ready(function() {
-    var copyBtn = $('.landing-aff__coupon_buttons')
+    var copyBtn = '';
+    copyBtn = $('.landing-aff__coupon_buttons');
 
     $(copyBtn).on('click',function() {
-        $(this).addClass('anim_btn')
-        $(this).text('Copied')
-        setTimeout(function(){
-            $(this).removeClass('anim_btn')
-            $(this).text('Copy Code')
-        },4000)
-    })
+        $(this).addClass('anim_btn');
+        $(this).text('Copied');
+        /*setTimeout(function(){
+            $(this).removeClass('anim_btn');
+            $(this).text('Copy Code');
+        },1000)*/
+    });
+
+    new ClipboardJS('.landing-aff__coupon_buttons');
 
     $('.terms button').on('click', function(e){
         var parentDiv = $(this).parent();
         parentDiv.toggleClass('showTerms');
-        $(this).toggleClass('btnUp')
+        $(this).toggleClass('btnUp');
         if($('.terms').hasClass('showTerms')){
             $(this).text('Terms and Conditions');
         }else{
@@ -124,6 +113,6 @@ $( document ).ready(function() {
         }
     })
 
-    new ClipboardJS('.landing-aff__coupon_buttons');
+
 
 });
