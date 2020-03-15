@@ -70,6 +70,16 @@ html, body {
     }
 }
 
+@media screen and (max-width: 1250px){
+    #section01 {
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background: url("../images/bg_tablet.jpg");
+    }
+}
+
 #section02 {
     position: relative;
     width: 100%;
@@ -105,6 +115,12 @@ html, body {
         margin-right: 0;
         width: 150px;
         left: initial;
+    }
+}
+
+@media screen and (max-width: 1440px){
+    .demo .scroll-btn {
+        display: none;
     }
 }
 
@@ -205,6 +221,12 @@ html, body {
     }
 }
 
+@media screen and (max-width: 1250px){
+    .landing-aff__container {
+        margin-bottom: 0;
+    }
+}
+
 .landing-aff__title {
     font-family: Montserrat-sb;
     font-size: 90px;
@@ -212,6 +234,14 @@ html, body {
     text-align: center;
     padding-top: 150px;
     margin-bottom: 95px;
+}
+
+@media screen and (max-width: 1250px){
+    .landing-aff__title {
+        padding-top: 0;
+        margin-bottom: 0;
+        font-size: 24px;
+    }
 }
 
 .landing-aff__title span {
@@ -226,10 +256,23 @@ html, body {
     }
 }
 
+@media screen and (max-width: 1250px){
+    .landing-aff__title span {
+        font-size: 24px;
+        color: #fff;
+    }
+}
+
 .landing-aff__masonry {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+@media screen and (max-width: 1250px){
+    .landing-aff__masonry {
+        display: none;
+    }
 }
 
 .landing-aff__masonry_row {
@@ -367,6 +410,12 @@ html, body {
     display: flex;
     justify-content: space-around;
     height: 100%;
+}
+
+@media screen and (max-width: 1250px){
+    .landing-aff__slider_wrap {
+        flex-direction: column;
+    }
 }
 
 .landing-aff__slider_right img {
@@ -675,6 +724,11 @@ html, body {
     margin-top: 30px;
 }
 
+@media screen and (max-width: 1250px){
+    .landing-aff__slider_headers {
+        display: none;
+    }
+}
 
 
 

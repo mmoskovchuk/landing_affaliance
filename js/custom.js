@@ -85,6 +85,14 @@ var swiper = new Swiper('.swiper-container', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        0: {
+            direction: 'horizontal',
+        },
+        1250: {
+            direction: 'vertical',
+        }
+    }
 });
 
 $( document ).ready(function() {
