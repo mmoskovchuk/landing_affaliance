@@ -88,6 +88,8 @@ var swiper = new Swiper('.swiper-container', {
     breakpoints: {
         0: {
             direction: 'horizontal',
+            slidesPerView: 1,
+            spaceBetween: 50,
         },
         1250: {
             direction: 'vertical',

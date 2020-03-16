@@ -118,7 +118,7 @@ html, body {
     }
 }
 
-@media screen and (max-width: 1440px){
+@media screen and (max-width: 1250px){
     .demo .scroll-btn {
         display: none;
     }
@@ -438,6 +438,13 @@ html, body {
     justify-content: center;
     position: relative;
 }
+
+@media screen and (max-width: 1250px){
+    .landing-aff__slider_container {
+        width: 100%;
+    }
+}
+
 .landing-aff__wrap {
     display: flex;
     height: 100%;
@@ -448,10 +455,26 @@ html, body {
     height: 100%;
 }
 
+@media screen and (max-width: 1250px){
+    .swiper-container {
+        margin-left: 0;
+        /*width: 65%;*/
+    }
+}
+
 .swiper-slide {
     transition: all .7s;
     /*height: auto !important;*/
     opacity: .6;
+}
+
+@media screen and (max-width: 1250px) {
+    .swiper-slide-next {
+        opacity: 0;
+    }
+    .swiper-slide-prev {
+        opacity: 0;
+    }
 }
 
 .swiper-slide .landing-aff__slider_left {
@@ -466,6 +489,16 @@ html, body {
     position: relative;
 }
 
+@media screen and (max-width: 1250px){
+    .landing-aff__slider_left {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        top: 0;
+    }
+}
+
 .landing-aff__slider_right {
     width: 60%;
     display: flex;
@@ -474,10 +507,23 @@ html, body {
     overflow: hidden;
 }
 
+@media screen and (max-width: 1250px){
+    .landing-aff__slider_right {
+        width: 60%;
+        position: static;
+    }
+}
+
 .swiper-button__wrap {
     position: absolute;
     left: 184px;
     bottom: 208px;
+}
+
+@media screen and (max-width: 1250px) {
+    .landing-aff__slider_main-desc--wrap {
+        display: flex;
+    }
 }
 
 .swiper-slide-active {
@@ -610,6 +656,12 @@ html, body {
     object-fit: contain;
 }
 
+@media screen and (max-width: 1250px){
+    .landing-aff__slider_logo {
+        margin-right: 56px;
+    }
+}
+
 .landing-aff__slider_desc--wrap p {
     font-family: Montserrat-b;
     font-size: 60px;
@@ -697,8 +749,31 @@ html, body {
     position: relative;
 }
 
+@media screen and (max-width: 1250px){
+    .landing-aff__coupon_wrap {
+        display: none;
+    }
+    .landing-aff__coupon_wrap--mobile {
+        display: flex;
+        position: absolute;
+        right: 116px;
+    }
+}
+
+@media screen and (min-width: 1250px){
+    .landing-aff__coupon_wrap--mobile {
+        display: none;
+    }
+}
+
 .landing-aff__slider_desc--wrap {
     margin-bottom: 30px;
+}
+
+@media screen and (max-width: 1250px){
+    .landing-aff__slider_desc--wrap {
+        display: flex;
+    }
 }
 
 .landing-aff__coupon_buttons_btn {
