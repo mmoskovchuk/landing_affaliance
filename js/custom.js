@@ -122,7 +122,19 @@ $( document ).ready(function() {
             $(this).text('Terms and Conditions');
         }
     })
+});
 
-
-
+$(document).ready(function () {
+    $("a").click(function () {
+        var elementClick = $(this).attr("href");
+        var elementId = $(this).attr("data-id");
+        swiper.slideTo(elementId, 1000);
+        var destination = $(elementClick).offset().top;
+       /* if ($.browser.safari) {
+            $('body').animate({ scrollTop: destination }, 1100); //1100 - скорость
+        } else {
+            $('html').animate({ scrollTop: destination }, 1100);
+        }*/
+        return false;
+    });
 });
