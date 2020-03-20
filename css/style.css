@@ -602,6 +602,12 @@ and (max-width : 768px) and (orientation : portrait) {
     background: #000;
     border-radius: 8px;
     margin-right: 20px;
+    box-shadow: 1px 1px 23px -5px rgba(0,0,0,0.75);
+    transition: .3s;
+}
+
+.landing-aff__masonry_el:hover {
+    box-shadow: none;
 }
 
 .landing-aff__masonry_el a {
@@ -1392,7 +1398,7 @@ and (device-height : 812px){
 @media screen and (max-width: 1250px){
     .landing-aff__slider_desc--wrap p:last-child,
     .landing-aff__slider_desc--wrap--mobile p:last-child {
-        font-size: 30px;
+        font-size: 24px;
     }
 }
 
@@ -1406,7 +1412,7 @@ and (device-height : 812px){
 @media screen and (max-width: 640px){
     .landing-aff__slider_desc--wrap p:last-child,
     .landing-aff__slider_desc--wrap--mobile p:last-child {
-        font-size: 30px;
+        font-size: 24px;
         text-align: center;
     }
 }
@@ -1782,6 +1788,28 @@ and (max-width : 768px) and (orientation : portrait) {
 @media screen and (max-width: 1280px){
     .terms.showTerms p {
         overflow-y: scroll;
+        padding-right: 10px;
+    }
+
+    /* width */
+    .terms.showTerms p::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    /* Track */
+    .terms.showTerms p::-webkit-scrollbar-track {
+        background: #888;
+    }
+
+    /* Handle */
+    .terms.showTerms p::-webkit-scrollbar-thumb {
+        background: #FFB111;
+        position: absolute;
+    }
+
+    /* Handle on hover */
+    .terms.showTerms p::-webkit-scrollbar-thumb:hover {
+        background: #bb8311;
     }
 }
 

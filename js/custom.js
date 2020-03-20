@@ -138,3 +138,28 @@ $(document).ready(function () {
         return false;
     });
 });
+
+/*random script*/
+
+    function mix(b) {
+        for (var c = document.createElement("div"), d = 0; d < b.length; d++) {
+            var a = Math.floor(Math.random() * b.length),
+                e = b[d],
+                f = e.parentNode,
+                a = b[a],
+                g = a.parentNode;
+            f.insertBefore(c, e);
+            g.insertBefore(e, a);
+            f.insertBefore(a, c);
+        }
+    };
+
+document.addEventListener("DOMContentLoaded", mix(document.getElementsByClassName("swiper-slide")));
+
+    function count(b){
+        for (var d = 0; d < b.length; d++) {
+            document.querySelectorAll(".landing-aff__slider_headers p")[d].textContent = d+1;
+        }
+    }
+
+document.addEventListener("DOMContentLoaded", count(document.getElementsByClassName("swiper-slide")));
