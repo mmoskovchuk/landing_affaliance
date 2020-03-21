@@ -1641,7 +1641,10 @@ and (orientation : portrait) {
     height: 41px;
     border: none;
     outline: none;
-    border-radius: 5px 5px 0 0 ;
+    border-top-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
     cursor: pointer;
     background-color: #000;
     transition: background-color .3s;
@@ -1650,7 +1653,7 @@ and (orientation : portrait) {
     bottom: 94px;
     font-family: Museo-sans;
     font-size: 12px;
-    left: -1px;
+    left: 0px;
     padding: 10px 32px;
     border-top-left-radius: 0;
     border-top-right-radius: 5px;
@@ -1725,7 +1728,7 @@ and (max-width : 768px) and (orientation : portrait) {
 }
 .terms.showTerms button{
     background: #000000;
-    bottom: 95px;
+    bottom: 94px;
 }
 .terms {
     background: transparent;

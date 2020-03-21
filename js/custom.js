@@ -1,12 +1,35 @@
-$(function() {
-    $('a[href*=#]').on('click', function(e) {
-        e.preventDefault();
-        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
-    });
-});
 
 
+/*random script*/
+/*function mix(b) {
+    for (var c = document.createElement("div"), d = 0; d < b.length; d++) {
+        var a = Math.floor(Math.random() * b.length),
+            e = b[d],
+            f = e.parentNode,
+            a = b[a],
+            g = a.parentNode;
+        f.insertBefore(c, e);
+        g.insertBefore(e, a);
+        f.insertBefore(a, c);
+    }
+};
+
+document.addEventListener("DOMContentLoaded", mix(document.getElementsByClassName("swiper-slide")));
+
+    function count(b){
+    for (var d = 0; d < b.length; d++) {
+        document.querySelectorAll(".landing-aff__slider_headers p")[d].textContent = d+1;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", count(document.getElementsByClassName("swiper-slide")));*/
+
+var total = $('.swiper-slide').length, // get the number of slides
+    rand = Math.floor( Math.random() * total ); // random number
+
+/* slider */
 var swiper = new Swiper('.swiper-container', {
+    initialSlide: rand,
     direction: 'vertical',
     slidesPerView: 2,
     loopedSlides: 11,
@@ -97,6 +120,7 @@ var swiper = new Swiper('.swiper-container', {
     }
 });
 
+/* copied script */
 $( document ).ready(function() {
     var copyBtn = '';
     copyBtn = $('.landing-aff__coupon_buttons');
@@ -104,10 +128,10 @@ $( document ).ready(function() {
     $(copyBtn).on('click',function() {
         $(this).addClass('anim_btn');
         $(this).text('Copied');
-        /*setTimeout(function(){
+        setTimeout(function(){
             $(this).removeClass('anim_btn');
             $(this).text('Copy Code');
-        },1000)*/
+        },1000)
     });
 
     new ClipboardJS('.landing-aff__coupon_buttons');
@@ -124,42 +148,26 @@ $( document ).ready(function() {
     })
 });
 
-$(document).ready(function () {
-    $("a").click(function () {
-        var elementClick = $(this).attr("href");
+/* navigation by elements */
+window.onload = function() {
+
+   $(".landing-aff__masonry_el a").click(function () {
         var elementId = $(this).attr("data-id");
         swiper.slideTo(elementId, 1000);
-        var destination = $(elementClick).offset().top;
-       /* if ($.browser.safari) {
-            $('body').animate({ scrollTop: destination }, 1100); //1100 - скорость
-        } else {
-            $('html').animate({ scrollTop: destination }, 1100);
-        }*/
+        //var destination = $(elementClick).offset().top;
+        /* if ($.browser.safari) {
+             $('body').animate({ scrollTop: destination }, 1100); //1100 - скорость
+         } else {
+             $('html').animate({ scrollTop: destination }, 1100);
+         }*/
         return false;
     });
+};
+
+/* scroll down */
+$(function() {
+    $('a[href*=#]').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+    });
 });
-
-/*random script*/
-
-    function mix(b) {
-        for (var c = document.createElement("div"), d = 0; d < b.length; d++) {
-            var a = Math.floor(Math.random() * b.length),
-                e = b[d],
-                f = e.parentNode,
-                a = b[a],
-                g = a.parentNode;
-            f.insertBefore(c, e);
-            g.insertBefore(e, a);
-            f.insertBefore(a, c);
-        }
-    };
-
-document.addEventListener("DOMContentLoaded", mix(document.getElementsByClassName("swiper-slide")));
-
-    function count(b){
-        for (var d = 0; d < b.length; d++) {
-            document.querySelectorAll(".landing-aff__slider_headers p")[d].textContent = d+1;
-        }
-    }
-
-document.addEventListener("DOMContentLoaded", count(document.getElementsByClassName("swiper-slide")));
